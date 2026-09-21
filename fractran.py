@@ -1,6 +1,3 @@
-from logging import raiseExceptions
-
-
 class Fraction:
     def __init__(self, numérateur, dénominateur):
         self.numérateur = numérateur
@@ -20,3 +17,4 @@ class Facteur:
         for k in range(len(exposants)):
             a *= self.facteurs[k] ** exposants[k]
         return a
+    def décomposition(self, n):
