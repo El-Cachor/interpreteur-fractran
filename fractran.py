@@ -3,8 +3,8 @@ class Fraction:
         self.numérateur = numérateur
         self.dénominateur = dénominateur
 
-    def est_entier(self):
-        return self.numérateur % self.dénominateur == 0
+    def est_entier(self, n):
+        return n % self.dénominateur == 0
 
-    def valeur(self):
-        return self.numérateur / self.dénominateur
+    def valeur(self, n):
+        return n / self.dénominateur
