@@ -7,4 +7,4 @@ class Fraction:
         return n % self.dénominateur == 0
 
     def valeur(self, n):
-        return n / self.dénominateur
+        return self.numérateur * n // self.dénominateur
