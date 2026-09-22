@@ -1,4 +1,4 @@
-from fractran import Facteur, Fraction
+from fractran import Facteur, Fraction, Fractran
 
 
 def test_Fraction_init():
@@ -25,3 +25,15 @@ def test_Facteur_nombre():
 def test_Facteur_décomposition():
     assert Facteur([2, 3, 7]).décomposition(1) == [0, 0, 0]
     assert Facteur([2, 3, 7]).décomposition((2**3) * (3**2) * (7)) == [3, 2, 1]
+
+
+def test_Fractran_init():
+    programme = [Fraction(3, 10), Fraction(4, 3)]
+    assert Fractran(programme).programme == programme
+
+
+def test_Fractran_run():
+    programme = Fractran([Fraction(3, 10), Fraction(4, 3)])
+
+    assert programme.run(14) == 14
+    assert programme.run(15) == 8
