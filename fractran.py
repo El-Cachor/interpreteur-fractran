@@ -44,6 +44,21 @@ class Fractran:
                 i += 1
         return n
 
+    def suite(self, n, N):
+        i = 0
+        L=[n]
+        while i < len(self.programme):
+            if self.programme[i].est_entier(n):
+                n = self.programme[i].valeur(n)
+                L.append(n)
+                if len(L) == N:
+                    return L
+                i = 0
+            else:
+                i += 1
+        return L
+
+
 def somme(i, j):
     a = [Fraction(3, 2)]
     b = Facteur([2, 3, 5])

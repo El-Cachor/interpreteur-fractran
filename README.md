@@ -1,1 +1,1 @@
-# interpréteur-fractran
+D'abord on crée une liste nommé fibonacci qui contient plein de fractions puis on applique l’algorithme Fractran sur 3 avec cette liste et on s’arrête à 1000 nombres dans la liste sortie_brute créée. on teste ensuite si dans sortie_brute il y a des nombres qui sont uniquement décomposables par 2 et 3 et on ajoute leur couple d'exposants dans la liste sortie.

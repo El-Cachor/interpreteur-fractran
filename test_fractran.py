@@ -39,6 +39,14 @@ def test_Fractran_run():
     assert programme.run(15) == 8
 
 
+def test_Fractran_suite():
+    programme = Fractran([Fraction(3, 10), Fraction(4, 3)])
+
+    assert programme.suite(15, 4) == [15, 20, 6, 8]
+    assert programme.suite(15, 2) == [15, 20]
+    assert programme.suite(14, 3) == [14]
+
+
 def test_somme():
     assert somme(3, 4) == 7
     assert somme(10, 6) == 16
