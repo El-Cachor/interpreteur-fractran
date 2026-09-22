@@ -43,3 +43,17 @@ class Fractran:
             else:
                 i += 1
         return n
+
+def somme(i, j):
+    a = [Fraction(3, 2)]
+    b = Facteur([2, 3, 5])
+    c= Fractran(a).run(b.nombre([i, j]))
+    for k in range(len(b.décomposition(c))):
+        if b.décomposition(c)[k] != 0:
+            return b.décomposition(c)[k]
+
+def produit(i, j):
+    a=0
+    for k in range(j):
+        a = somme(i, a)
+    return a
